@@ -25,12 +25,14 @@ release = '0.1.0'
 
 autoclass_content = "both"
 
+
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinx.ext.githubpages'
+    'nbsphinx',
+    'sphinx.ext.githubpages',
 ]
 
 templates_path = ['_templates']
