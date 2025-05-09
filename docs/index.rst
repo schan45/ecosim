@@ -38,7 +38,7 @@ Example
 ============
 Here is an example Jupyter notebook you can run in Google Colab:
 
-`Open in Google Colab <https://colab.research.google.com/drive/1x9O-ydAMVsbqQOgFuae_Nr9UdSIV2sac>`_
+`Open in Google Colab <https://colab.research.google.com/drive/1ZLftvj7A9WAEP6Cm6KsOWO0uePUy_aRx?fbclid=IwZXh0bgNhZW0CMTEAAR6vVCRUDm6U2xzFU0faPznaCrdAnrgTmaBAqR_ahDtvpXeorKbVmbkY2LVaaA_aem_RZsMuWuG3VyL82OL3vLJWg#scrollTo=hmDnZNLiPWWu>`_
 
 Features
 ========
