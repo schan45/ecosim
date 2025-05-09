@@ -1,0 +1,28 @@
+{
+  "organisms": {
+    "Carrot": {
+      "type": "Producer",
+      "color": "#fa7b05"
+    },
+    "Rabbit": {
+      "type": "Consumer",
+      "trophic_level": "primary",
+      "color": "#85807e"
+    },
+    "Fox": {
+      "type": "Consumer",
+      "trophic_level": "secondary",
+      "color": "#eb0505"
+    },
+    "Fungi": {
+      "type": "Decomposer",
+      "color": "#964B00",
+      "decomposition_rate": 15
+    }
+
+  },
+  "predation": {
+    "Rabbit": ["Carrot"],
+    "Fox": ["Rabbit"]
+  }
+}
