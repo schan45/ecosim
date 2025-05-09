@@ -9,8 +9,12 @@ def plot_organisms(step, organisms, grid_size=20, output_dir="frames", foodweb=N
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    plt.figure(figsize=(6, 6))
+    scale = 0.3  # 1 rácsmezőhöz ennyi inch jusson
+    figsize = (grid_size * scale, grid_size * scale)
+    plt.figure(figsize=figsize)
     ax = plt.gca()
+    ax.set_facecolor("#ccffcc")         # háttér halványzöld
+    ax.grid(True, color="#ccffcc")      # rácsvonalak halványzöld
     ax.set_xlim(0, grid_size)
     ax.set_ylim(0, grid_size)
     ax.set_xticks(range(0, grid_size + 1))
@@ -23,7 +27,7 @@ def plot_organisms(step, organisms, grid_size=20, output_dir="frames", foodweb=N
         "water": "#add8e6",    # világoskék
         "hill": "#deb887",     # barnás
         "shelter": "#d3d3d3",  # világosszürke
-        "plain": "#ffffff"     # fehér (alap)
+        "plain": "#ccffcc"     # fehérvilágoszöld (alap)
     }
 
     # Terep kirajzolása háttérként
@@ -51,8 +55,7 @@ def plot_organisms(step, organisms, grid_size=20, output_dir="frames", foodweb=N
         else:
             marker = "o"
             color = color_map.get(org.species, "black")
-
-        ax.plot(org.x + 0.5 + offset, org.y + 0.5 + offset, marker, color=color, markersize=10, zorder=1)
+            ax.plot(org.x + 0.5 + offset, org.y + 0.5 + offset, marker, color=color, markersize=10, zorder=1)
 
     plt.title(f"Step {step}")
     plt.savefig(f"{output_dir}/step_{step:03d}.png")

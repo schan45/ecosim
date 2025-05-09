@@ -1,15 +1,18 @@
 # -*- coding: utf-8 -*-
 
-# -- Path setup --------------------------------------------------------------
+# Configuration file for the Sphinx documentation builder.
 
 import os
 import sys
 
+# -- Path setup --------------------------------------------------------------
+
 # Add your project's directories to sys.path for autodoc
-sys.path.insert(0, os.path.abspath(".."))        # main project root
-sys.path.insert(0, os.path.abspath("../core"))   # example module
-sys.path.insert(0, os.path.abspath("../logic"))
-sys.path.insert(0, os.path.abspath("../simulation"))
+sys.path.insert(0, os.path.abspath(".."))           # main project root
+sys.path.insert(0, os.path.abspath("../ecosim"))    # main package
+sys.path.insert(0, os.path.abspath("../core"))      # submodule (if exists)
+sys.path.insert(0, os.path.abspath("../logic"))     # submodule (if exists)
+sys.path.insert(0, os.path.abspath("../simulation"))# submodule (if exists)
 
 # -- Project information -----------------------------------------------------
 
@@ -22,12 +25,14 @@ release = '0.1.0'
 
 autoclass_content = "both"
 
+
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',  # if you use Google/Numpy style docstrings
+    'sphinx.ext.napoleon',
     'nbsphinx',
+    'sphinx.ext.githubpages',
 ]
 
 templates_path = ['_templates']
@@ -38,6 +43,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = None
 todo_include_todos = True
 autodoc_member_order = 'bysource'
+
+# -- Napoleon settings -------------------------------------------------------
+
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
 
 # -- Options for HTML output -------------------------------------------------
 
