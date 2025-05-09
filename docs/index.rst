@@ -72,20 +72,6 @@ Main Module
    :undoc-members:
    :show-inheritance:
 
-Core Module
------------
-.. automodule:: core
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Simulation Module
------------------
-.. automodule:: simulation
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 Terrain Module
 --------------
 .. automodule:: terrain
@@ -145,13 +131,6 @@ Population Module
 Plot Module
 --------------
 .. automodule:: plot
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Utilities Module
-----------------
-.. automodule:: utils
    :members:
    :undoc-members:
    :show-inheritance:
