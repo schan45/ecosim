@@ -62,7 +62,7 @@ class SimulationEngine:
 
         reproduce._foodweb = self.foodweb
         reproduce._terrain = self.terrain
-        # --- Decomposer interval kiszámítása ---
+        
         decomposer_species = [
             s for s in self.foodweb.all_species()
             if self.foodweb.get_type(s) == "Decomposer"
