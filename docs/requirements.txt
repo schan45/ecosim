@@ -1,9 +1,13 @@
 sphinx
 sphinx-rtd-theme
+sphinx-autodoc-typehints
 matplotlib
 numpy
 pandas
 nbsphinx
-json
 random
-logic.behavior
+ipython
+imageio
+pytest
+scipy
+seaborn
