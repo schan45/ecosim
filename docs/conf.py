@@ -8,15 +8,15 @@ import sys
 # -- Path setup --------------------------------------------------------------
 
 # Add your project's directories to sys.path for autodoc
-sys.path.insert(0, os.path.abspath(".."))           # main project root
-sys.path.insert(0, os.path.abspath("../ecosim"))    # main package
-sys.path.insert(0, os.path.abspath("../main")) 
-sys.path.insert(0, os.path.abspath("../core"))
-sys.path.insert(0, os.path.abspath("../logic")) 
-sys.path.insert(0, os.path.abspath("../simulation")) 
-sys.path.insert(0, os.path.abspath("../statistic")) 
-sys.path.insert(0, os.path.abspath("../_tools")) 
-sys.path.insert(0, os.path.abspath("../tests")) 
+sys.path.insert(0, os.path.abspath('..')) # Add the base project directory
+sys.path.insert(0, os.path.abspath('../main')) # Add the core module
+sys.path.insert(0, os.path.abspath('../core')) # Add the visualization module
+sys.path.insert(0, os.path.abspath('../simulation')) # Add the statistics module
+sys.path.insert(0, os.path.abspath('../terrain')) # Add the simulation module (if separate)
+sys.path.insert(0, os.path.abspath('../organism')) # Add the terrain module (if separate)
+sys.path.insert(0, os.path.abspath('../utilities'))
+
+
 
 # -- Project information -----------------------------------------------------
 
