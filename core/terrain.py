@@ -1,4 +1,5 @@
 
+import json
 import random
 from collections import defaultdict
 
@@ -8,11 +9,31 @@ class Terrain:
         self.map = defaultdict(lambda: "plain")
         self.shelter_occupants = {}
         self.water_counters = defaultdict(lambda: defaultdict(int))
+    
+    def load_from_config(self, config_path):
+        with open(config_path, 'r') as f:
+            data = json.load(f)
 
-        self.generate_water()
-        self.generate_trees()
-        self.generate_hills()
-        self.generate_shelters()
+        mode = data.get("mode", "random")
+        if mode == "random":
+            self.generate_water()
+            self.generate_trees()
+            self.generate_hills()
+            self.generate_shelters()
+        elif mode == "manual":
+            for obj in data.get("terrain_objects", []):
+                ttype = obj["type"]
+                x0 = obj["x"]
+                y0 = obj["y"]
+                width = obj.get("width", 1)
+                height = obj.get("height", 1)
+
+                for dx in range(width):
+                    for dy in range(height):
+                        x = x0 + dx
+                        y = y0 + dy
+                        if 0 <= x < self.grid_size and 0 <= y < self.grid_size:
+                            self.map[(x, y)] = ttype
 
     def _place_random(self, terrain_type):
         tries = 0

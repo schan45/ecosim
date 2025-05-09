@@ -39,7 +39,7 @@ class SimulationEngine:
 
             elif org_type == "Consumer":
                 trophic_level = self.foodweb.get_trophic_level(species)
-                count = level_counts.get(trophic_level, 1)
+                count = self.foodweb.organisms[species].get("initial_count", level_counts.get(trophic_level, 1))
                 for _ in range(count):
                     while True:
                         x = random.randint(0, self.grid_size - 1)

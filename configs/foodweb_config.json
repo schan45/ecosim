@@ -2,21 +2,23 @@
   "organisms": {
     "Carrot": {
       "type": "Producer",
-      "color": "#fa7b05"
+      "color": "#fa7b05",
+      "initial_count": 3
     },
     "Rabbit": {
       "type": "Consumer",
       "trophic_level": "primary",
-      "color": "#85807e"
+      "color": "#85807e",
+      "initial_count": 5
     },
     "Fox": {
       "type": "Consumer",
       "trophic_level": "secondary",
-      "color": "#eb0505"
+      "color": "#eb0505",
+      "initial_count": 2
     },
     "Fungi": {
       "type": "Decomposer",
-      "color": "#964B00",
       "decomposition_rate": 15
     }
 

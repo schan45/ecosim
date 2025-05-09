@@ -1,0 +1,15 @@
+{
+    "mode": "manual",
+    "terrain_objects": [
+      { "type": "water", "x": 3, "y": 3, "width": 4, "height": 2 },
+      { "type": "hill", "x": 10, "y": 10, "width": 3, "height": 3 },
+      { "type": "tree", "x": 5, "y": 5 },
+      { "type": "tree", "x": 5, "y": 9 },
+      { "type": "tree", "x": 5, "y": 5 },
+      { "type": "tree", "x": 1, "y": 3 },
+      { "type": "tree", "x": 8, "y": 12 },
+      { "type": "shelter", "x": 15, "y": 6 },
+      { "type": "shelter", "x": 4, "y": 5 }
+    ]
+  }
+   
