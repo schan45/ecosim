@@ -116,9 +116,8 @@ class Terrain:
     def update_shelters(self, organisms):
         for org in organisms:
             pos = (org.x, org.y)
-            # 🎯 Ha nem "primary" de menedéken áll
             if self.is_shelter(org.x, org.y) and getattr(org, "trophic_level", None) != "primary":
-                # 💡 Próbáljunk neki találni új, nem shelter pozíciót
+                
                 for _ in range(20):  # max 20 próbálkozás
                     new_x = random.randint(0, self.grid_size - 1)
                     new_y = random.randint(0, self.grid_size - 1)
@@ -126,18 +125,18 @@ class Terrain:
                         org.x = new_x
                         org.y = new_y
                         break
-                continue  # ugorjuk át a további shelter logikát
+                continue  
 
-            # ✅ Ha primary, akkor trackeljük a menedékben töltött idejét
+            
             if self.is_shelter(org.x, org.y) and getattr(org, "trophic_level", None) == "primary":
                 if pos not in self.shelter_occupants:
                     self.shelter_occupants[pos] = {}
                 count = self.shelter_occupants[pos].get(id(org), 0) + 1
                 self.shelter_occupants[pos][id(org)] = count
                 if count > 3:
-                    org.alive = False  # túl sok időt töltött bent
+                    org.alive = False  
             else:
-                # ❌ már nem shelterben van, töröljük a számlálót
+                
                 for data in self.shelter_occupants.values():
                     data.pop(id(org), None)
 
