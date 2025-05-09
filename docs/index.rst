@@ -72,6 +72,13 @@ Main Module
    :undoc-members:
    :show-inheritance:
 
+Food Web Module
+---------------
+.. automodule:: foodweb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Simulation Module
 -----------------
 .. automodule:: simulation
