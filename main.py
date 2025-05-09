@@ -3,6 +3,17 @@ from simulation.engine import SimulationEngine
 from core.terrain import Terrain
 import json
 import os
+import shutil
+
+stats_dir = "statistics_plots"
+if os.path.exists(stats_dir):
+    shutil.rmtree(stats_dir)
+os.makedirs(stats_dir)
+
+# --- FRAME-ek törlése ---
+if os.path.exists("frames"):
+    for f in os.listdir("frames"):
+        os.remove(os.path.join("frames", f))
 
 def main():
     grid_size = 20
@@ -26,7 +37,4 @@ def main():
     engine.run()
 
 if __name__ == "__main__":
-    if os.path.exists("frames"):
-        for f in os.listdir("frames"):
-            os.remove(os.path.join("frames", f))
     main()
