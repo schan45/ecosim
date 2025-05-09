@@ -8,7 +8,21 @@ import numpy as np
 from IPython.display import Image
 
 def plot_organisms(step, organisms, grid_size=20, output_dir="frames", foodweb=None, terrain=None):
-    """Kirajzolja az adott lépés állapotát, a tereptípusokkal együtt"""
+    """
+    Plots the state of the simulation at a given step.
+
+    This function visualizes the environment and all organisms present at the specified step.
+    It overlays terrain types and animal positions using colored markers. If multiple organisms
+    are at the same position, they are slightly offset to be visible. Dead organisms are marked with 'x'.
+
+    Parameters:
+        step (int): The simulation step number.
+        organisms (list): List of organism objects with species, coordinates, and alive status.
+        grid_size (int): Size of the simulation grid (default is 20).
+        output_dir (str): Directory to save the output PNG (default is "frames").
+        foodweb (object): Optional foodweb object to map species to consistent colors.
+        terrain (object): Optional terrain object to render environmental backgrounds.
+    """
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -65,6 +79,19 @@ def plot_organisms(step, organisms, grid_size=20, output_dir="frames", foodweb=N
     plt.close()
 
 def get_species_colors(organisms, foodweb=None):
+    """
+    Assigns consistent colors to each species based on the foodweb or automatically.
+
+    If a foodweb object is provided, species colors are fetched using its color mapping.
+    Otherwise, a default colormap ('tab10') is used to assign distinguishable colors.
+
+    Parameters:
+        organisms (list): List of organism objects containing a .species attribute.
+        foodweb (object, optional): Object with a get_color(species) method.
+
+    Returns:
+        dict[str, str]: Mapping from species name to hex color code.
+    """
     if foodweb:
         return {org.species: foodweb.get_color(org.species) for org in organisms}
     else:
