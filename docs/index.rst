@@ -72,6 +72,13 @@ Main Module
    :undoc-members:
    :show-inheritance:
 
+Core Module
+-----------
+.. automodule:: core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Simulation Module
 -----------------
 .. automodule:: simulation
