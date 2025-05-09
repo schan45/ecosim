@@ -21,7 +21,7 @@ Welcome to ecosim's documentation!
    :maxdepth: 1
    :caption: Tutorials
 
-   ../notebooks/ecosim_quickstart.ipynb
+   ../Notebooks/ecosim_quickstart.ipynb
 
 Installation
 ============
