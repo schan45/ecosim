@@ -5,6 +5,11 @@ import logic.behavior as behavior
 from visualizer.plot import plot_organisms
 import random
 from logic.reproduction import reproduce
+from collections import defaultdict
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from statistics_tools.heatmap import export_heatmaps
 
 class SimulationEngine:
     def __init__(self, grid_size=20, steps=30, foodweb_path="configs/foodweb_config.json"):
@@ -12,6 +17,7 @@ class SimulationEngine:
         self.steps = steps
         self.foodweb = FoodWeb(foodweb_path)
         self.organisms = []
+        self.heatmaps = defaultdict(lambda: np.zeros((self.grid_size, self.grid_size), dtype=int))
         self.terrain = None  # később beállítandó kívülről, pl. terrain = Terrain(...)
 
     def setup(self):
@@ -77,6 +83,9 @@ class SimulationEngine:
 
                 if self.terrain:
                     self.terrain.apply_terrain_effects(org, step)
+                
+                if 0 <= org.x < self.grid_size and 0 <= org.y < self.grid_size:
+                    self.heatmaps[org.species][org.y, org.x] += 1  
 
             if self.terrain:
                 self.terrain.update_shelters(self.organisms)
@@ -97,3 +106,14 @@ class SimulationEngine:
 
 
             plot_organisms(step, self.organisms, self.grid_size, foodweb=self.foodweb, terrain=self.terrain)
+        for species, heatmap_data in self.heatmaps.items():
+            plt.figure(figsize=(8, 6))
+            plt.imshow(heatmap_data, cmap="YlOrRd", interpolation='bilinear')
+            plt.title(f"Hőtérkép: {species}")
+            plt.xlabel("X koordináta")
+            plt.ylabel("Y koordináta")
+            plt.colorbar()
+            plt.tight_layout()
+            plt.close()
+
+        export_heatmaps(self.heatmaps)
