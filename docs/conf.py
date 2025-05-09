@@ -2,7 +2,10 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+# -- FIX: Add root project and package folder to sys.path --------------------
+sys.path.insert(0, os.path.abspath('..'))              # project root
+sys.path.insert(0, os.path.abspath('../ecosim'))       # package folder (adjust if named differently)
 
 # -- Project information -----------------------------------------------------
 
@@ -14,10 +17,10 @@ release = '0.1.0'
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    'sphinx.ext.autodoc',    # automatically include docstrings
-    'sphinx.ext.napoleon',   # support for NumPy/Google style docstrings
-    'sphinx.ext.viewcode',   # add links to source code
-    'sphinx.ext.githubpages' # support GitHub Pages
+    'sphinx.ext.autodoc',     # include docstrings
+    'sphinx.ext.napoleon',    # support NumPy/Google style docstrings
+    'sphinx.ext.viewcode',    # link to source
+    'sphinx.ext.githubpages', # support GitHub Pages
 ]
 
 templates_path = ['_templates']
@@ -32,7 +35,7 @@ html_static_path = ['_static']
 
 autodoc_member_order = 'bysource'
 
-# -- Napoleon settings (for NumPy/Google style docstrings) -------------------
+# -- Napoleon settings -------------------------------------------------------
 
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
