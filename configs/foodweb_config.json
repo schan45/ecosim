@@ -3,23 +3,23 @@
     "Carrot": {
       "type": "Producer",
       "color": "#fa7b05",
-      "initial_count": 3
+      "initial_count": 20
     },
     "Rabbit": {
       "type": "Consumer",
       "trophic_level": "primary",
       "color": "#85807e",
-      "initial_count": 5
+      "initial_count": 15
     },
     "Fox": {
       "type": "Consumer",
       "trophic_level": "secondary",
       "color": "#eb0505",
-      "initial_count": 2
+      "initial_count": 7
     },
     "Fungi": {
       "type": "Decomposer",
-      "decomposition_rate": 15
+      "decomposition_rate": 3
     }
 
   },

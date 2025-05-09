@@ -1,12 +1,13 @@
+# statistic_tools/heatmap.py
+
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-
+from IPython.display import Image, display
 
 def export_heatmaps(heatmaps, output_dir="statistics_plots"):
     """
     Menti a fajonkénti hőtérképeket PNG formátumban az adott mappába.
-    
     """
     for species, heatmap_data in heatmaps.items():
         plt.figure(figsize=(8, 6))
@@ -21,3 +22,12 @@ def export_heatmaps(heatmaps, output_dir="statistics_plots"):
         plt.savefig(filepath)
         plt.close()
 
+def display_heatmap(species: str, path: str = "statistics_plots") -> None:
+    """
+    Megjeleníti a korábban mentett heatmap képet adott fajhoz.
+    """
+    file_path = os.path.join(path, f"heatmap_{species}.png")
+    if os.path.exists(file_path):
+        display(Image(filename=file_path))
+    else:
+        print(f"⚠️ No heatmap image found for species '{species}' at {file_path}")

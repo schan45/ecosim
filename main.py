@@ -1,4 +1,3 @@
-# main.py
 from simulation.engine import SimulationEngine
 from core.terrain import Terrain
 import json
@@ -17,7 +16,7 @@ if os.path.exists("frames"):
 
 def main():
     grid_size = 20
-    steps = 32
+    steps = 20
 
     # Konfiguráció betöltése (ha létezik)
     terrain_config_path = "configs/terrain_config.json"

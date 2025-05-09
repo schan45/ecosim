@@ -7,7 +7,7 @@ Welcome to ecosim's documentation!
 **ecosim** is an ecological simulation toolbox designed to model and visualize interactions between producers and consumers in a grid-based environment.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    installation
@@ -16,12 +16,12 @@ Welcome to ecosim's documentation!
    getting_started
    usage
    api
+   
 
 .. toctree::
    :maxdepth: 1
    :caption: Tutorials
 
-   ../Notebooks/ecosim_quickstart.ipynb
 
 Installation
 ============
@@ -33,6 +33,12 @@ To install the project locally, clone the repository and run:
    git clone https://github.com/schan45/ecosim.git
    cd ecosim
    pip install -r requirements.txt
+
+Example
+============
+Here is an example Jupyter notebook you can run in Google Colab:
+
+`Open in Google Colab <https://colab.research.google.com/drive/1x9O-ydAMVsbqQOgFuae_Nr9UdSIV2sac>`_
 
 Features
 ========

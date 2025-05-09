@@ -9,7 +9,9 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from statistics_tools.heatmap import export_heatmaps
+from statistic_tools.heatmap import export_heatmaps
+from statistic_tools.population import export_population_chart
+
 
 class SimulationEngine:
     def __init__(self, grid_size=20, steps=30, foodweb_path="configs/foodweb_config.json"):
@@ -18,6 +20,7 @@ class SimulationEngine:
         self.foodweb = FoodWeb(foodweb_path)
         self.organisms = []
         self.heatmaps = defaultdict(lambda: np.zeros((self.grid_size, self.grid_size), dtype=int))
+        self.population_history = defaultdict(list)
         self.terrain = None  # később beállítandó kívülről, pl. terrain = Terrain(...)
 
     def setup(self):
@@ -96,6 +99,15 @@ class SimulationEngine:
 
             newbies = reproduce(self.organisms, self.grid_size, step)
             self.organisms.extend(newbies)
+
+            species_counts = defaultdict(int)
+            for org in self.organisms:
+                if org.alive:
+                    species_counts[org.species] += 1
+
+            for species in self.foodweb.all_species():
+                self.population_history[species].append(species_counts.get(species, 0))
+
                         # --- Globális dekompozíció ---
             if step > 0 and step % self.decomposition_interval == 0:
                 for corpse in self.organisms:
@@ -106,6 +118,9 @@ class SimulationEngine:
 
 
             plot_organisms(step, self.organisms, self.grid_size, foodweb=self.foodweb, terrain=self.terrain)
+            
+            export_population_chart(self.population_history)
+
         for species, heatmap_data in self.heatmaps.items():
             plt.figure(figsize=(8, 6))
             plt.imshow(heatmap_data, cmap="YlOrRd", interpolation='bilinear')
