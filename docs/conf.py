@@ -10,13 +10,15 @@ import sys
 # Add your project's directories to sys.path for autodoc
 sys.path.insert(0, os.path.abspath('..')) # Add the base project directory
 sys.path.insert(0, os.path.abspath('../main')) # Add the core module
-sys.path.insert(0, os.path.abspath('../core')) # Add the visualization module
-sys.path.insert(0, os.path.abspath('../simulation')) # Add the statistics module
 sys.path.insert(0, os.path.abspath('../terrain')) # Add the simulation module (if separate)
 sys.path.insert(0, os.path.abspath('../organism')) # Add the terrain module (if separate)
 sys.path.insert(0, os.path.abspath('../foodweb'))
-sys.path.insert(0, os.path.abspath('../utilities'))
-
+sys.path.insert(0, os.path.abspath('../behavior'))
+sys.path.insert(0, os.path.abspath('../reproduction'))
+sys.path.insert(0, os.path.abspath('../engine')) 
+sys.path.insert(0, os.path.abspath('../heatmap')) 
+sys.path.insert(0, os.path.abspath('../population')) 
+sys.path.insert(0, os.path.abspath('../plot')) 
 
 
 # -- Project information -----------------------------------------------------
