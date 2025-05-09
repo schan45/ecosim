@@ -1,5 +1,3 @@
-
-=======
 .. ecosim documentation master file, created by
    sphinx-quickstart on 2025-05-09.
 
@@ -8,26 +6,22 @@ Welcome to ecosim's documentation!
 
 **ecosim** is an ecological simulation toolbox designed to model and visualize interactions between producers and consumers in a grid-based environment.
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
    installation
    modules
    usage_guide
+   getting_started
+   usage
+   api
 
 .. toctree::
    :maxdepth: 1
    :caption: Tutorials
 
    ../notebooks/ecosim_quickstart.ipynb
-=======
-   getting_started
-   usage
-   api
-   modules
 
 Installation
 ============
@@ -99,4 +93,3 @@ Utilities Module
    :members:
    :undoc-members:
    :show-inheritance:
-
