@@ -100,6 +100,12 @@ Organism Module
    :undoc-members:
    :show-inheritance:
 
+Foodweb Module
+--------------
+.. automodule:: foodweb
+   :members:
+   :undoc-members:
+   :show-inheritance:
 Utilities Module
 ----------------
 .. automodule:: utils
