@@ -27,6 +27,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',  # if you use Google/Numpy style docstrings
+    'nbsphinx',
 ]
 
 templates_path = ['_templates']
