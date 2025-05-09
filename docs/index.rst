@@ -106,6 +106,49 @@ Foodweb Module
    :members:
    :undoc-members:
    :show-inheritance:
+
+Behavior Module
+--------------
+.. automodule:: behavior
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Reproduction Module
+--------------
+.. automodule:: reproduction
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Engine Module
+--------------
+.. automodule:: engine
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Heatmap Module
+--------------
+.. automodule:: heatmap
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Population Module
+--------------
+.. automodule:: population
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Plot Module
+--------------
+.. automodule:: plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Utilities Module
 ----------------
 .. automodule:: utils
