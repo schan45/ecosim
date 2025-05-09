@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.abspath('../core')) # Add the visualization module
 sys.path.insert(0, os.path.abspath('../simulation')) # Add the statistics module
 sys.path.insert(0, os.path.abspath('../terrain')) # Add the simulation module (if separate)
 sys.path.insert(0, os.path.abspath('../organism')) # Add the terrain module (if separate)
+sys.path.insert(0, os.path.abspath('../foodweb'))
 sys.path.insert(0, os.path.abspath('../utilities'))
 
 
