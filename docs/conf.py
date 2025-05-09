@@ -10,9 +10,7 @@ import sys
 # Add your project's directories to sys.path for autodoc
 sys.path.insert(0, os.path.abspath(".."))           # main project root
 sys.path.insert(0, os.path.abspath("../ecosim"))    # main package
-sys.path.insert(0, os.path.abspath("../core"))      # submodule (if exists)
-sys.path.insert(0, os.path.abspath("../logic"))     # submodule (if exists)
-sys.path.insert(0, os.path.abspath("../simulation"))# submodule (if exists)
+
 
 # -- Project information -----------------------------------------------------
 
