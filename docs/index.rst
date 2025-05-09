@@ -1,6 +1,13 @@
-Ecosim Documentation
-=====================
+Ecosim Dokumentáció
+====================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Modulok:
+
+   modules
+
+.. automodule:: main
+   :members:
+   :undoc-members:
+   :show-inheritance:
