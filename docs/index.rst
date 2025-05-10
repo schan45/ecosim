@@ -16,7 +16,7 @@ documentation for details.
    :caption: Contents:
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: API Reference
 
    core
