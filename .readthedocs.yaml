@@ -16,6 +16,8 @@ build:
 # Define the dependencies to install
 python:
   install:
+    - method: pip
+      path: .
     - requirements: docs/requirements.txt
 
 # Build documentation in the "docs/" directory with Sphinx
