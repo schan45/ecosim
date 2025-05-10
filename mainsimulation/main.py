@@ -21,7 +21,7 @@ if os.path.exists("frames"):
     for f in os.listdir("frames"):
         os.remove(os.path.join("frames", f))
 
-def simulation(grid_size, steps):
+def simulation(grid_size, steps, terrain_config_path, foodweb_path):
     """
     Initialize terrain, configure simulation engine and run the simulation.
 
@@ -29,7 +29,7 @@ def simulation(grid_size, steps):
     grid_size (int): Size of the simulation grid (NxN).
     steps (int): Number of simulation steps to execute.
     """
-    terrain_config_path = "configs/terrain_config.json"
+
     terrain = Terrain(grid_size)
     
     # Load terrain config if available, otherwise generate random terrain
@@ -41,7 +41,7 @@ def simulation(grid_size, steps):
         terrain.generate_hills()
         terrain.generate_shelters()
 
-    engine = SimulationEngine(grid_size=grid_size, steps=steps, foodweb_path="configs/foodweb_config.json")
+    engine = SimulationEngine(grid_size=grid_size, steps=steps, foodweb_path=foodweb_path)
     engine.terrain = terrain
     engine.setup()
     engine.run()
