@@ -96,9 +96,11 @@ A minimal trophic chain was simulated with the following species:
 
 ---
 
-### 🖼️ Ecosystem Evolution over Time
+### Ecosystem Evolution over Time
 
-<img src="docs/img/steps.png" width="30%" title="Snapshots"/>
+<p align="center">
+<img src="docs/img/steps.png" width="100%" title="Snapshots"/>
+</p>
 
 These snapshots highlight the shift in organism distribution as Rabbits consume Carrots and Foxes begin to cluster around prey-dense zones.
 
@@ -116,7 +118,9 @@ Each heatmap illustrates where each species spent the most time during the simul
 
 This chart summarizes species count during the simulation window, revealing collapse and stabilization patterns.
 
-<img src="docs/img/population_chart.png" width="80%" title="Population chart"/>
+<p align="center">
+<img src="docs/img/population_chart.png" width="50%" title="Population chart"/>
+</p>
 
 Notably:
 
@@ -147,45 +151,47 @@ pip project: https://pypi.org/project/ecosim/
 ### Python Requirements:
 
 Python == 3.10
-alabaster==0.7.13
-contourpy==1.0.1
-cycler==0.12.1
-docutils==0.20.1
-fonttools==4.51.0
-imageio==2.37.0
-ipykernel==6.29.5
-jupyter-client==8.6.1
-jupyter-core==5.7.2
-kiwisolver==1.4.5
-matplotlib==3.8.4
-nest-asyncio==1.6.0
+
 numpy==1.26.4
-packaging==24.0
-parso==0.8.4
+
+matplotlib==3.8.4
+
+imageio==2.37.0
+
 Pillow==10.3.0
-prompt-toolkit==3.0.43
-Pygments==2.18.0
-pyparsing==3.1.2
-python-dateutil==2.9.0.post0
-scikit-learn==1.4.2
+
 scipy==1.13.1
+
 seaborn==0.13.2
-six==1.16.0
-sphinx==7.2.6
-threadpoolctl==3.6.0
-tornado==6.4
-traitlets==5.14.3
-
-All the python requirements are installed when the toolbox is installed, so there is no need for any additional commands.
-
 
 ## Project Structure - MORE DETAILS!
 
 ```text
 ecosim/
-├── core/              # Organism classes and food web
-├── logic/             # Behavior rules (movement, interactions)
-├── simulation/        # SimulationEngine setup and main loop
-├── statistic_tools/   # Output stats, charts and heatmaps
-├── visualizer/        # Matplotlib-based visualization tools
-├── docs/              # Sphinx-based documentation
+├── core/                  # Domain objects and ecosystem logic
+│   ├── foodweb.py         # FoodWeb: species types, trophic levels, predation
+│   └── organism.py        # Base Organism, Producer, Consumer classes
+│
+├── logic/                 # Agent behavior logic
+│   └── behaviour.py       # Movement, predation, escape, eating rules
+│
+├── simulation/            # Simulation engine and setup
+│   └── engine.py          # Core simulation loop and terrain application
+│
+├── statistic_tools/       # Statistical analysis and output
+│   ├── heatmap.py         # Movement heatmap export
+│   └── population.py      # Population over time plot
+│
+├── visualizer/            # Plotting and animation tools
+│   └── plot.py            # Per-step snapshot visualization
+│
+├── configs/               # JSON configuration files
+│   ├── foodweb_config.json    # Species and interaction setup
+│   └── terrain_config.json    # Terrain cell types and layout
+│
+├── frames/                # Automatically generated simulation images
+│
+├── statistics_plots/      # Output figures (e.g. population graphs, heatmaps)
+│
+├── docs/                  # Sphinx documentation
+│   ├── conf.py, index.rst, etc.
