@@ -12,10 +12,16 @@ author = 'Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
 release = '0.1'
 
 extensions = [
+    'myst_parser',              # to parse markdown
     'sphinx.ext.autodoc',       # <-- include docstrings
     'sphinx.ext.napoleon',      # <-- Google/NumPy docstring support
     'sphinx.ext.viewcode',      # <-- add [source] links
 ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # Napoleon config for Google-style docstrings
 napoleon_google_docstring = True
