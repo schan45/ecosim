@@ -1,7 +1,7 @@
 alabaster==0.7.13
 contourpy==1.0.1
 cycler==0.12.1
-docutils==0.20.1
+docutils<0.20 and >=0.14
 fonttools==4.51.0
 imageio==2.37.0
 ipykernel==6.29.5
