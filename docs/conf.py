@@ -33,7 +33,6 @@ exclude_patterns = []
 
 # HTML output config
 html_theme = 'alabaster'  # or 'sphinx_rtd_theme' if installed
-html_static_path = ['_static']
 
 # Master doc (if not index.rst):
 master_doc = 'index'
@@ -54,8 +53,18 @@ html_theme_options = {
     'description': 'Ecosystem Simulation in Python',
     'github_user': 'schan45',
     'github_repo': 'ecosim',
+    'fixed_sidebar': True,
+    'page_width': '1024px',
+    'sidebar_width': '220px',
+    'body_text': '#333333',
+    'sidebar_text': '#333333',
+    'sidebar_background': '#fcdfb3',  # világos háttér
+    'link': '#0066cc',
+    'link_hover': '#004499',
+    'font_family': 'sans-serif',
 }
 
+html_css_files = ['custom.css']
 
 autoclass_content = 'class'
 autodoc_member_order = 'bysource'
