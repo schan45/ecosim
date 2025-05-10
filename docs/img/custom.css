@@ -1,0 +1,9 @@
+.sidebar .logo-name {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.sidebar .sidebar-text {
+    font-size: 85%;
+    color: #555;
+}
