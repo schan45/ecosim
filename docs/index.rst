@@ -6,10 +6,7 @@
 Ecosim Toolbox: Animal Ecosystem Simulation documentation
 =========================================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Overview
-   README <README.md>
+.. mdinclude:: ../README.md
 
 .. toctree::
    :maxdepth: 2
