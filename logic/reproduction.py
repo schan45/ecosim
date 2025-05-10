@@ -24,6 +24,20 @@ REPRO_RATIOS = {
 }
 
 def reproduce(organisms, grid_size, step_counter):
+    """
+    Handles the reproduction logic for organisms in the simulation.
+
+    This function spawns new Producer or Consumer organisms under various conditions
+    such as energy thresholds, trophic level, proximity, and availability of prey.
+
+    Parameters:
+    organisms (list): List of organism objects (Producers or Consumers).
+    grid_size (int): Size of the simulation grid.
+    step_counter (int): Current simulation step used for cooldown and timing logic.
+
+    Returns:
+    list: List of newly spawned organism objects.
+    """
     new_organisms = []
     species_by_pos = defaultdict(list)
 
