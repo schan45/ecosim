@@ -96,10 +96,6 @@ Simulation setup:
      "Fox": ["Rabbit"]
    }
 
-
-
-
-
 Ecosystem Evolution over Time
 -----------------------------
 
@@ -153,9 +149,9 @@ Available on pip, with the command:
 
 .. code-block:: bash
 
-   pip install ecosim
+   pip install ecosim2d
 
-pip project: https://pypi.org/project/ecosim/
+pip project: https://pypi.org/project/ecosim2d/
 
 
 Requirements
