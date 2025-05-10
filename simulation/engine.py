@@ -1,4 +1,3 @@
-
 from core.organism import Consumer, Producer
 from core.foodweb import FoodWeb
 import logic.behavior as behavior
@@ -12,18 +11,38 @@ import seaborn as sns
 from statistic_tools.heatmap import export_heatmaps
 from statistic_tools.population import export_population_chart
 
-
 class SimulationEngine:
+    """
+    Controls and runs the ecosystem simulation.
+
+    Handles grid setup, population initialization, step-wise organism behavior,
+    reproduction, and visualization including population tracking and heatmaps.
+    """
+
     def __init__(self, grid_size=20, steps=30, foodweb_path="configs/foodweb_config.json"):
+        """
+        Initialize simulation parameters and state.
+
+        Parameters:
+        grid_size (int): Size of the simulation grid.
+        steps (int): Total number of simulation steps.
+        foodweb_path (str): Path to food web configuration JSON.
+        """
         self.grid_size = grid_size
         self.steps = steps
         self.foodweb = FoodWeb(foodweb_path)
         self.organisms = []
         self.heatmaps = defaultdict(lambda: np.zeros((self.grid_size, self.grid_size), dtype=int))
         self.population_history = defaultdict(list)
-        self.terrain = None  # később beállítandó kívülről, pl. terrain = Terrain(...)
+        self.terrain = None
 
     def setup(self):
+        """
+        Populate the grid with initial organisms based on food web configuration.
+
+        Organisms are placed randomly avoiding blocked or occupied terrain.
+        Sets up internal reproduction and decomposition parameters.
+        """
         level_counts = {
             "primary": 5,
             "secondary": 2,
@@ -59,10 +78,9 @@ class SimulationEngine:
                             break
                     self.organisms.append(Consumer(species, x, y, trophic_level=trophic_level))
 
-
         reproduce._foodweb = self.foodweb
         reproduce._terrain = self.terrain
-        
+
         decomposer_species = [
             s for s in self.foodweb.all_species()
             if self.foodweb.get_type(s) == "Decomposer"
@@ -72,8 +90,14 @@ class SimulationEngine:
             default=20
         )
 
-
     def run(self):
+        """
+        Execute the simulation over the predefined number of steps.
+
+        Organisms act each step based on their roles (Producer/Consumer),
+        terrain effects are applied, population data is updated, and visual outputs
+        such as organism plots and heatmaps are generated.
+        """
         for step in range(self.steps):
             print(f"\n--- Step {step} ---")
             living = [org for org in self.organisms if org.alive]
@@ -86,9 +110,9 @@ class SimulationEngine:
 
                 if self.terrain:
                     self.terrain.apply_terrain_effects(org, step)
-                
+
                 if 0 <= org.x < self.grid_size and 0 <= org.y < self.grid_size:
-                    self.heatmaps[org.species][org.y, org.x] += 1  
+                    self.heatmaps[org.species][org.y, org.x] += 1
 
             if self.terrain:
                 self.terrain.update_shelters(self.organisms)
@@ -108,7 +132,6 @@ class SimulationEngine:
             for species in self.foodweb.all_species():
                 self.population_history[species].append(species_counts.get(species, 0))
 
-                        # --- Globális dekompozíció ---
             if step > 0 and step % self.decomposition_interval == 0:
                 for corpse in self.organisms:
                     if not corpse.alive:
@@ -116,9 +139,8 @@ class SimulationEngine:
                         self.organisms.remove(corpse)
                         break
 
-
             plot_organisms(step, self.organisms, self.grid_size, foodweb=self.foodweb, terrain=self.terrain)
-            
+
             export_population_chart(self.population_history)
 
         for species, heatmap_data in self.heatmaps.items():
