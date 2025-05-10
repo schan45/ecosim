@@ -3,10 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: img/ecosim_logo.png
-   :align: right
-   :width: 150px
-
 Ecosim Toolbox: Animal Ecosystem Simulation documentation
 =========================================================
 
