@@ -10,6 +10,7 @@ Ecosim is a modular, agent-based ecosystem simulation framework written in Pytho
 
 Features
 --------
+
    - Agent-based modeling with customizable behaviors (e.g. ``chase``, ``flee``, ``random_move``)
    - Modular project structure (``core``, ``logic``, ``simulation``, ``visualizer``, ``statistic_tools``)
    - Grid-based terrain including water, hills, shelters and blocked zones
