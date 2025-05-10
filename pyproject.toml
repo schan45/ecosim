@@ -11,4 +11,15 @@ authors = [
     {name = "Anikó Vitos"},
     {name = "Tamás Bence Tóth"},
 ]
+readme = "README.md"
+requires-python = ">=3.8"
 dependencies = []
+
+[tool.setuptools]
+packages = [
+    "core",
+    "logic",
+    "simulation",
+    "statistic_tools",
+    "visualizer"
+]
