@@ -9,9 +9,5 @@ python:
   install:
     - requirements: requirements.txt
 
-jobs:
-    pre_build:
-      - pip install myst-parser
-
 sphinx:
   configuration: docs/conf.py
