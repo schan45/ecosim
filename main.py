@@ -1,4 +1,3 @@
 from mainsimulation.main import simulation
 
-if __name__ == "__main__":
-    simulation(20, 3)
+simulation(20, 3, "configs/terrain_config.json", "configs/foodweb_config.json")
