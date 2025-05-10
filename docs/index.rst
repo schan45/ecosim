@@ -19,4 +19,8 @@ documentation for details.
    :maxdepth: 4
    :caption: API Reference
 
-   modules
+   core
+   logic
+   simulation
+   statistic_tools
+   visualizer
