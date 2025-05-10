@@ -3,12 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. image:: _static/ecosim_logo.png
+   :align: right
+   :width: 150px
+
 Ecosim Toolbox: Animal Ecosystem Simulation documentation
 =========================================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Ecosim is a modular, agent-based ecosystem simulation framework...
 
 
 .. toctree::
