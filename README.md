@@ -143,9 +143,9 @@ This modular simulation framework is ideal for studying:
 
 ## Installation
 Available on pip, with the command:
-***pip install ecosim***
+***pip install ecosim2d***
 
-pip project: https://pypi.org/project/ecosim/
+pip project: [https://pypi.org/project/ecosim/](https://pypi.org/project/ecosim2d/)
 
 ## Requirements
 ### Python Requirements:
