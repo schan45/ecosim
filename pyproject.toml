@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecosim"
+version = "0.1.0"
+description = "Animal ecosystem simulation"
+authors = [
+    {name = "Anna Schleier"},
+    {name = "Anikó Vitos"},
+    {name = "Tamás Bence Tóth"},
+]
+dependencies = []
