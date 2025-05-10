@@ -71,7 +71,7 @@ Sample Scenario: 3-Level Food Web
 - 🥕 `Carrot`: A **Producer** that occupies random grid locations and reproduces under certain conditions.
 - 🐰 `Rabbit`: A **Primary Consumer** that feeds on Carrots and moves frequently.
 - 🦊 `Fox`: A **Secondary Consumer** that hunts Rabbits and adapts its path based on prey location.
-. 🍄 `Fungi`: A **Decomposer** that recycles energy from dead organisms (Carcasses).
+- 🍄 `Fungi`: A **Decomposer** that recycles energy from dead organisms (Carcasses).
 
 Simulation setup:
 
