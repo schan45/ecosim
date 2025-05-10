@@ -3,7 +3,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Ecosim Toolbox: Animal Ecosystem Simulation'
 copyright = '2025, Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
