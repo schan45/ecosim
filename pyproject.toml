@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ecosim"
+name = "ecosim2d"
 version = "0.1.0"
 description = "Ecosystem simulation toolbox in Python"
 authors = [
