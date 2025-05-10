@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ecosim"
 version = "0.1.0"
-description = "Animal ecosystem simulation"
+description = "Ecosystem simulation toolbox in Python"
 authors = [
     {name = "Anna Schleier"},
     {name = "Anikó Vitos"},
@@ -13,7 +13,14 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = []
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "imageio",
+  "Pillow",
+  "scipy",
+  "seaborn"
+]
 
 [tool.setuptools]
 packages = [
@@ -23,3 +30,7 @@ packages = [
     "statistic_tools",
     "visualizer"
 ]
+
+[project.urls]
+Homepage = "https://github.com/schan45/ecosim"
+Documentation = "https://ecosim.readthedocs.io/"
