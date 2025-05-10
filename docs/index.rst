@@ -1,27 +1,26 @@
-.. ecosim documentation master file, created by
-   sphinx-quickstart on 2025-05-09.
-
 Welcome to ecosim's documentation!
 ==================================
 
 **ecosim** is an ecological simulation toolbox designed to model and visualize interactions between producers and consumers in a grid-based environment.
 
+Contents
+--------
+
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+   :maxdepth: 2
+   :caption: User Guide
 
    installation
-   modules
-   usage_guide
    getting_started
+   usage_guide
    usage
-   api
-   
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Tutorials
+   :maxdepth: 2
+   :caption: Modules
 
+   modules
+   api
 
 Installation
 ============
@@ -35,10 +34,11 @@ To install the project locally, clone the repository and run:
    pip install -r requirements.txt
 
 Example
-============
+=======
+
 Here is an example Jupyter notebook you can run in Google Colab:
 
-`Open in Google Colab <https://colab.research.google.com/drive/1ZLftvj7A9WAEP6Cm6KsOWO0uePUy_aRx?fbclid=IwZXh0bgNhZW0CMTEAAR6vVCRUDm6U2xzFU0faPznaCrdAnrgTmaBAqR_ahDtvpXeorKbVmbkY2LVaaA_aem_RZsMuWuG3VyL82OL3vLJWg#scrollTo=hmDnZNLiPWWu>`_
+`Open in Google Colab <https://colab.research.google.com/drive/1x9O-ydAMVsbqQOgFuae_Nr9UdSIV2sac>`_
 
 Features
 ========
@@ -72,65 +72,30 @@ Main Module
    :undoc-members:
    :show-inheritance:
 
+Simulation Module
+-----------------
+.. automodule:: simulation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Terrain Module
 --------------
-.. automodule:: terrain
+.. automodule:: core.terrain
    :members:
    :undoc-members:
    :show-inheritance:
 
 Organism Module
 ---------------
-.. automodule:: organism
+.. automodule:: core.organism
    :members:
    :undoc-members:
    :show-inheritance:
 
-Foodweb Module
---------------
-.. automodule:: foodweb
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Behavior Module
---------------
-.. automodule:: behavior
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Reproduction Module
---------------
-.. automodule:: reproduction
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Engine Module
---------------
-.. automodule:: engine
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Heatmap Module
---------------
-.. automodule:: heatmap
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Population Module
---------------
-.. automodule:: population
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Plot Module
---------------
-.. automodule:: plot
+Utilities Module
+----------------
+.. automodule:: utils
    :members:
    :undoc-members:
    :show-inheritance:

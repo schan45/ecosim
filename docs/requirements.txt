@@ -1,12 +1,9 @@
 sphinx
 sphinx-rtd-theme
 sphinx-autodoc-typehints
+sphinxcontrib-napoleon
+nbsphinx
 matplotlib
 numpy
 pandas
-nbsphinx
-ipython
-imageio
 pytest
-scipy
-seaborn
