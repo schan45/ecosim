@@ -61,7 +61,6 @@ html_theme_options = {
     'sidebar_background': '#fcdfb3',  # világos háttér
     'link': '#0066cc',
     'link_hover': '#004499',
-    'font_family': 'sans-serif',
 }
 
 html_css_files = ['custom.css']
