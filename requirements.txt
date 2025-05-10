@@ -27,3 +27,4 @@ tornado==6.4
 traitlets==5.14.3
 sphinx>=5,<6
 myst_parser>=0.18,<0.19
+recommonmark
