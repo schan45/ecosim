@@ -1,28 +1,43 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+# conf.py - Sphinx configuration for ReadTheDocs-compatible API docs
 
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
 
 project = 'Ecosim Toolbox: Animal Ecosystem Simulation'
 copyright = '2025, Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
 author = 'Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
-release = '2025. 05. 09.'
+release = '0.1'
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+extensions = [
+    'sphinx.ext.autodoc',       # <-- include docstrings
+    'sphinx.ext.napoleon',      # <-- Google/NumPy docstring support
+    'sphinx.ext.viewcode',      # <-- add [source] links
+]
 
-extensions = []
+# Napoleon config for Google-style docstrings
+napoleon_google_docstring = True
+napoleon_numpy_docstring = False
 
+# Template and static paths
 templates_path = ['_templates']
 exclude_patterns = []
 
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = 'alabaster'
+# HTML output config
+html_theme = 'alabaster'  # or 'sphinx_rtd_theme' if installed
 html_static_path = ['_static']
+
+# Master doc (if not index.rst):
+master_doc = 'index'
+
+# Autodoc default options
+autodoc_default_options = {
+    'members': True,
+    'undoc-members': True,
+    'show-inheritance': True,
+    'inherited-members': True,
+    'special-members': '__init__',
+}
+
+autoclass_content = 'class'
+autodoc_member_order = 'bysource'
