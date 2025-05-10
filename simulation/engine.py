@@ -28,6 +28,7 @@ class SimulationEngine:
         steps (int): Total number of simulation steps.
         foodweb_path (str): Path to food web configuration JSON.
         """
+        
         self.grid_size = grid_size
         self.steps = steps
         self.foodweb = FoodWeb(foodweb_path)
@@ -146,9 +147,9 @@ class SimulationEngine:
         for species, heatmap_data in self.heatmaps.items():
             plt.figure(figsize=(8, 6))
             plt.imshow(heatmap_data, cmap="YlOrRd", interpolation='bilinear')
-            plt.title(f"Hőtérkép: {species}")
-            plt.xlabel("X koordináta")
-            plt.ylabel("Y koordináta")
+            plt.title(f"Heatmap: {species}")
+            plt.xlabel("X coordinate")
+            plt.ylabel("Y coordinate")
             plt.colorbar()
             plt.tight_layout()
             plt.close()
