@@ -44,7 +44,6 @@ autodoc_default_options = {
 html_static_path = ['img']
 html_logo = 'img/ecosim_logo.png'
 html_theme_options = {
-    'logo': 'ecosim_logo.png',
     'logo_name': True,
     'description': 'Ecosystem Simulation in Python',
     'github_user': 'schan45',
