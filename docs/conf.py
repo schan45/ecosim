@@ -41,5 +41,16 @@ autodoc_default_options = {
     'special-members': '__init__',
 }
 
+html_static_path = ['img']
+html_logo = 'img/ecosim_logo.png'
+html_theme_options = {
+    'logo': 'ecosim_logo.png',
+    'logo_name': True,
+    'description': 'Ecosystem Simulation in Python',
+    'github_user': 'schan45',
+    'github_repo': 'ecosim',
+}
+
+
 autoclass_content = 'class'
 autodoc_member_order = 'bysource'
