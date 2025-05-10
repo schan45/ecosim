@@ -16,7 +16,7 @@ Features
    - Grid-based terrain including water, hills, shelters and blocked zones
    - Support for producers, consumers, decomposers, omnivores across trophic levels
    - Matplotlib visual output and JSON statistical exports
-   - Interactive plots and Colab support via `ecosim_colab.ipynb <https://colab.research.google.com/drive/1ZLftvj7A9WAEP6Cm6KsOWO0uePUy_aRxusp=sharing>`_
+   - Interactive plots and Colab support via `ecosim_colab.ipynb <https://colab.research.google.com/drive/1ZLftvj7A9WAEP6Cm6KsOWO0uePUy_aRx?usp=sharing>`_
    - Online documentation hosted at `ReadTheDocs <https://ecosim.readthedocs.io/en/latest/>`_
 
 Citation
