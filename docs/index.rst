@@ -6,8 +6,8 @@
 Ecosim Toolbox: Animal Ecosystem Simulation documentation
 =========================================================
 
-Ecosim is a modular, agent-based ecosystem simulation framework...
-
+.. include:: ../README.md
+   :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 2
