@@ -9,6 +9,8 @@ Ecosim Toolbox: Animal Ecosystem Simulation documentation
 Ecosim is a modular, agent-based ecosystem simulation framework written in Python. It allows researchers and students to model, visualize and analyze the interactions of species within a simulated environment. The simulation incorporates terrain effects, species-level behaviors, trophic interactions and detailed statistical tracking.
 
 Features
+--------
+
    - Agent-based modeling with customizable behaviors (e.g. ``chase``, ``flee``, ``random_move``)
    - Modular project structure (``core``, ``logic``, ``simulation``, ``visualizer``, ``statistic_tools``)
    - Grid-based terrain including water, hills, shelters and blocked zones
@@ -18,6 +20,7 @@ Features
    - Online documentation hosted at `ReadTheDocs <https://ecosim.readthedocs.io/en/latest/>`_
 
 Citation
+--------
 
 If you use Ecosim for your work, please consider citing the GitHub repository::
 
@@ -29,6 +32,7 @@ If you use Ecosim for your work, please consider citing the GitHub repository::
        }
 
 Introduction
+------------
 
 **Ecosim** is an open-source, Python-based simulation toolbox designed to model dynamic interactions within artificial ecosystems. At its core, Ecosim uses an agent-based modeling (ABM) approach, where each organism is simulated individually with its own properties, behaviors, and energy levels. The framework provides a virtual 2D grid environment where organisms move, interact, hunt, escape, reproduce, and eventually die, all driven by customizable ecological rules.
 
