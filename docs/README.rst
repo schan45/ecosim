@@ -110,11 +110,11 @@ Heatmaps: Species Movement Density
 Each heatmap illustrates where each species spent the most time during the simulation. Redder zones indicate higher frequency.
 
 .. image:: img/heatmap_fox.png
-   :width: 30%
+   :width: 40%
 .. image:: img/heatmap_rabbit.png
-   :width: 30%
+   :width: 40%
 .. image:: img/heatmap_carrot.png
-   :width: 30%
+   :width: 40%
 
 Population Dynamics Over Time
 -----------------------------
