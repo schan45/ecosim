@@ -147,17 +147,52 @@ Import the simulation entry function and run it with parameters:
 Step 4: Output Location
 -----------------------
 
-- Visual frames: ``frames/`` folder
-- Heatmaps: ``statistics_plots/heatmap_*.png``
-- Population chart: ``statistics_plots/population_chart.png``
+After the simulation finishes, Ecosim automatically generates several output files that summarize spatial activity and population dynamics.
 
-Download outputs:
+Output directories and file paths:
+
+* **Visual frames** – saved to the ``frames/`` folder
+* **Heatmaps** – saved as PNG images under ``statistics_plots/heatmap_*.png``
+* **Population chart** – saved to ``statistics_plots/population_chart.png``
+
+These files are generated automatically during or after the simulation process, depending on the modules enabled.
+
+Accessing the Output Files
+--------------------------
+
+You can access the output files directly from your project directory or script output location.
+
+Example usage:
 
 .. code-block:: python
 
-    from google.colab import files
-    files.download('statistics_plots/population_chart.png')
+    import matplotlib.pyplot as plt
+    import matplotlib.image as mpimg
 
-----
+    # Display the population chart
+    img = mpimg.imread("statistics_plots/population_chart.png")
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
 
-This guide assumes the ``ecosim2d`` package handles all I/O via relative paths from the notebook's working directory (``/content/``). Ensure your simulation module supports these file paths dynamically.
+You can also open these files using any image viewer or incorporate them into a report.
+
+Working Directory Considerations
+--------------------------------
+
+Ecosim uses **relative file paths** when writing output. This means that all folders such as ``frames/`` and ``statistics_plots/`` will be created in the **current working directory** where the simulation was launched.
+
+Make sure your script or runtime environment has:
+
+* Write permission to the working directory
+* A valid path structure that matches the expected folders
+* Correct handling of relative vs absolute paths (if needed)
+
+If you're running simulations in different environments (e.g., notebooks, scripts, or deployment pipelines), ensure the working directory is correctly set at the start of execution:
+
+.. code-block:: python
+
+    import os
+    os.chdir("/path/to/project/root")
+
+By default, simulation outputs will be saved relative to this root unless configured otherwise.
