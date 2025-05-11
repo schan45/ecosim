@@ -224,3 +224,5 @@ Project Structure
    :caption: Detailed discriptions
 
    overview
+   setup
+   model
