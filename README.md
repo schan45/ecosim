@@ -178,6 +178,9 @@ ecosim/
 ├── simulation/            # Simulation engine and setup
 │   └── engine.py          # Core simulation loop and terrain application
 │
+├── mainsimulation/        # Simulation entrypoint module
+│   └── main.py            # High-level simulation runner coordinating all modules
+│
 ├── statistic_tools/       # Statistical analysis and output
 │   ├── heatmap.py         # Movement heatmap export
 │   └── population.py      # Population over time plot
