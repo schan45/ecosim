@@ -1,10 +1,7 @@
-Ecosim Toolbox: Animal Ecosystem Simulation
-===========================================
+About the Toolbox
+=================
 
 Ecosim is an open-source Python-based simulation toolkit designed to model the complex dynamics of animal ecosystems. Its goal is to provide a modular, visual, and educational environment where users can explore biodiversity, species interactions, and environmental influences in a virtual habitat.
-
-About the Toolbox
------------------
 
 At the core of Ecosim lies a simulation engine that orchestrates the movement, reproduction, death, and interaction of various organisms over a customizable grid-based terrain. Users can define species, their trophic relationships (such as predator-prey), and assign behavioral logic using configuration files. Each simulation step is visualized with clear grid-based plots that show organisms in their environment and allow tracking over time.
 
