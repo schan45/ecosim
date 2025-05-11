@@ -180,6 +180,9 @@ Project Structure
   ├── logic/                 # Agent behavior logic
   │   └── behaviour.py       # Movement, predation, escape, eating rules
   │
+  ├── mainsimulation/        # Simulation entrypoint module
+  │   └── main.py            # High-level simulation runner coordinating all modules
+  │
   ├── simulation/            # Simulation engine and setup
   │   └── engine.py          # Core simulation loop and terrain application
   │
@@ -209,6 +212,7 @@ Project Structure
    :maxdepth: 2
    :caption: API Reference
 
+   mainsimulation
    core
    logic
    simulation
