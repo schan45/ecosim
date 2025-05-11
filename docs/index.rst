@@ -226,3 +226,4 @@ Project Structure
    overview
    setup
    model
+   statistics
