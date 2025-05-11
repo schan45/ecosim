@@ -11,7 +11,7 @@ At the core of Ecosim lies a simulation engine that orchestrates the movement, r
 Food Web Overview
 -----------------
 
-.. image:: foodweb.png
+.. image:: img/foodweb.png
    :alt: Food Web Diagram
    :align: center
    :width: 80%
