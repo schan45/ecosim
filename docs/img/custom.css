@@ -14,3 +14,9 @@ body {
 h1, h2, h3 {
     font-family: 'Georgia', serif;
 }
+
+.wy-side-nav-search .project {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
