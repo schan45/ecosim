@@ -6,7 +6,7 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 
-project = 'Ecosim Toolbox: Animal Ecosystem Simulation'
+project = 'Ecosim Toolbox'
 copyright = '2025, Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
 author = 'Anna Schleier, Anikó Vitos, Tamás Bence Tóth'
 release = '0.1'
