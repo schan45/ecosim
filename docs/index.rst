@@ -12,7 +12,7 @@ Ecosim Toolbox: Animal Ecosystem Simulation documentation
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Discription
 
    readme
