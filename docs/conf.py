@@ -56,11 +56,11 @@ html_theme_options = {
     'fixed_sidebar': True,
     'page_width': '1024px',
     'sidebar_width': '220px',
-    'body_text': '#333333',
-    'sidebar_text': '#333333',
-    'sidebar_background': '#fcdfb3',  # világos háttér
-    'link': '#0066cc',
-    'link_hover': '#004499',
+    'body_text': '#fcfbfa',
+    'sidebar_text': '#fcfbfa',
+    'sidebar_background': '#0d0d0d',  # világos háttér
+    'link': '#2f9c34',
+    'link_hover': '#009903',
 }
 
 html_css_files = ['custom.css']
