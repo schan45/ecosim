@@ -28,3 +28,9 @@ Ecosim Toolbox: Animal Ecosystem Simulation documentation
    simulation
    statistic_tools
    visualizer
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Detailed discriptions
+
+   overview
