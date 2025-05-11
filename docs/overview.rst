@@ -18,23 +18,23 @@ A food web represents the complex network of feeding relationships within an eco
 The example shown above includes the following relationships:
 
 * **Producers**:
-  * Grass
-  * Fruits and flowers
-  * Seeds
+  - Grass
+  - Fruits and flowers
+  - Seeds
 
 * **Primary consumers (herbivores)**:
-  * Deer eats grass
-  * Chipmunk eats seeds
-  * Grouse eats fruits and flowers
-  * Insects eat grass
+  - Deer eats grass
+  - Chipmunk eats seeds
+  - Grouse eats fruits and flowers
+  - Insects eat grass
 
 * **Secondary/Tertiary consumers (carnivores or omnivores)**:
-  * Bear eats deer, chipmunk, grouse, and insects
-  * Hawk eats chipmunk and grouse
-  * Marmot eats insects
-  * Grouse may also eat insects
+  - Bear eats deer, chipmunk, grouse, and insects
+  - Hawk eats chipmunk and grouse
+  - Marmot eats insects
+  - Grouse may also eat insects
 
 * **Decomposers**:
-  * Fungi break down dead organisms such as deer and plants
+  - Fungi break down dead organisms such as deer and plants
 
 These trophic interactions define energy transfer pathways and help simulate realistic predator-prey dynamics in the virtual environment.
