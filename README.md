@@ -164,7 +164,7 @@ scipy==1.13.1
 
 seaborn==0.13.2
 
-## Project Structure - MORE DETAILS!
+## Project Structure
 
 ```text
 ecosim/
