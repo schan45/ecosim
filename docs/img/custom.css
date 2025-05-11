@@ -4,7 +4,7 @@
 }
 
 .sidebar .sidebar-text {
-    font-size: 85%;
+    font-size: 60%;
     color: #555;
 }
 
@@ -13,10 +13,4 @@ body {
 }
 h1, h2, h3 {
     font-family: 'Georgia', serif;
-}
-
-.wy-side-nav-search .project {
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1.4em;
 }
